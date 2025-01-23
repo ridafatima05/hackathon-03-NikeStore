@@ -26,7 +26,7 @@ const Cartpage: React.FC = () => {
     paymentMethod: '',
   });
 
-  const handleRemove = (_id: number) => {
+  const handleRemove = (_id:any) => {
     console.log("Removing product ID:", _id); 
     dispatch(remove(_id));
   };

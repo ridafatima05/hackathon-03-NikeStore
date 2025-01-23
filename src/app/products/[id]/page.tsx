@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { client } from "@/sanity/lib/client";
+import { client } from "@/app/sanity/lib/client"
 import Image from "next/image";
 import { use } from "react";
 import { useDispatch } from "react-redux";

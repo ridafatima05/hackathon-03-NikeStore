@@ -1,5 +1,5 @@
 import React from "react";
-import { client } from "@/sanity/lib/client";
+import { client } from "@/app/sanity/lib/client";
 import Image from "next/image";
 
 // Fetch product data based on the ID from the URL

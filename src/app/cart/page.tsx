@@ -157,7 +157,7 @@ const Cartpage: React.FC = () => {
         <div>
           {cartItems.length > 0 && (
             <div className="space-y-6">
-              {cartItems.map((product: CartItem) => (
+              {cartItems.map((product) => (
                 <div
                   key={product._id}
                   className="flex items-center bg-white shadow-md rounded-lg p-4"

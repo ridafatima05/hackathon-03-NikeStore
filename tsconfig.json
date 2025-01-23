@@ -1,27 +1,36 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ES2017", // Target ES2017 for modern JS features
+    "lib": ["dom", "dom.iterable", "esnext"], // Include required libraries
+    "allowJs": true, // Allow JavaScript files in the project
+    "skipLibCheck": true, // Skip type checking for declaration files
+    "strict": true, // Enable all strict type-checking options
+    "noEmit": true, // Prevent emitting compiled files
+    "esModuleInterop": true, // Enable ES module interop for compatibility
+    "module": "esnext", // Use ESNext module syntax
+    "moduleResolution": "node", // Resolve modules using Node.js-style resolution
+    "resolveJsonModule": true, // Allow importing JSON files as modules
+    "isolatedModules": true, // Ensure files can be transpiled in isolation
+    "jsx": "preserve", // Preserve JSX syntax for further transformation
+    "incremental": true, // Enable incremental compilation
+    "typeRoots": ["node_modules/@types"], // Include type definitions from node_modules
+    "baseUrl": ".", // Set base directory for module resolution
+    "paths": {
+      "@/*": ["./src/*"] // Map `@` to `src/` for cleaner imports
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "forceConsistentCasingInFileNames": true // Enforce consistent casing in imports
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts", // Include Next.js type declarations
+    "**/*.ts", // Include all TypeScript files
+    "**/*.tsx", // Include all TSX files
+    ".next/types/**/*.ts", // Include Next.js types
+    "src/**/*" // Ensure all files in src are included
+, "src/app/sanity/lib", "src/app/sanity/schemaTypes"  ],
+  "exclude": ["node_modules"] // Exclude node_modules directory
 }
